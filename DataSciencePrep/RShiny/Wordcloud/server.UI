@@ -1,0 +1,28 @@
+library(shiny)
+library(twitteR)
+library(wordcloud)
+library(tm)
+shinyServer(function (input, output) {
+
+rawData <- reactive(function(){
+tweets <- searchTwitter(input$term, n=input$cant,lang=input$lang)
+twListToDF(tweets)
+})
+
+output$table <- reactiveTable(function () {
+head(rawData()[1],n=5)
+})
+output$wordcl<- reactivePlot(function(){
+tw.text<-enc2native(rawData()$text)
+tw.text <- tolower(tw.text)
+tw.text <- removeWords(tw.text,c(stopwords(input$lang),”rt”))
+tw.text <- removePunctuation(tw.text,TRUE)
+tw.text <-unlist(strsplit(tw.text,” “))
+
+word<- sort(table(tw.text),TRUE)
+
+wordc<-head(word,n=15)
+
+wordcloud(names(wordc),wordc,random.color=TRUE,colors=rainbow(10),scale=c(15,2))
+})
+})

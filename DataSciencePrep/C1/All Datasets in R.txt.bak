@@ -1,0 +1,907 @@
+Data sets in package ‘ada’:
+
+soldat                Solubility Data
+
+Data sets in package ‘amap’:
+
+lubisch               Dataset Lubischew
+
+Data sets in package ‘arules’:
+
+Adult                 Adult Data Set
+AdultUCI              Adult Data Set
+Epub                  Epub Data Set
+Groceries             Groceries Data Set
+Income                Income Data Set
+IncomeESL             Income Data Set
+
+Data sets in package ‘boot’:
+
+acme                  Monthly Excess Returns
+aids                  Delay in AIDS Reporting in England and
+                      Wales
+aircondit             Failures of Air-conditioning Equipment
+aircondit7            Failures of Air-conditioning Equipment
+amis                  Car Speeding and Warning Signs
+aml                   Remission Times for Acute Myelogenous
+                      Leukaemia
+beaver                Beaver Body Temperature Data
+bigcity               Population of U.S. Cities
+brambles              Spatial Location of Bramble Canes
+breslow               Smoking Deaths Among Doctors
+calcium               Calcium Uptake Data
+cane                  Sugar-cane Disease Data
+capability            Simulated Manufacturing Process Data
+catsM                 Weight Data for Domestic Cats
+cav                   Position of Muscle Caveolae
+cd4                   CD4 Counts for HIV-Positive Patients
+cd4.nested            Nested Bootstrap of cd4 data
+channing              Channing House Data
+city                  Population of U.S. Cities
+claridge              Genetic Links to Left-handedness
+cloth                 Number of Flaws in Cloth
+co.transfer           Carbon Monoxide Transfer
+coal                  Dates of Coal Mining Disasters
+darwin                Darwin's Plant Height Differences
+dogs                  Cardiac Data for Domestic Dogs
+downs.bc              Incidence of Down's Syndrome in British
+                      Columbia
+ducks                 Behavioral and Plumage Characteristics of
+                      Hybrid Ducks
+fir                   Counts of Balsam-fir Seedlings
+frets                 Head Dimensions in Brothers
+grav                  Acceleration Due to Gravity
+gravity               Acceleration Due to Gravity
+hirose                Failure Time of PET Film
+islay                 Jura Quartzite Azimuths on Islay
+manaus                Average Heights of the Rio Negro river at
+                      Manaus
+melanoma              Survival from Malignant Melanoma
+motor                 Data from a Simulated Motorcycle Accident
+neuro                 Neurophysiological Point Process Data
+nitrofen              Toxicity of Nitrofen in Aquatic Systems
+nodal                 Nodal Involvement in Prostate Cancer
+nuclear               Nuclear Power Station Construction Data
+paulsen               Neurotransmission in Guinea Pig Brains
+poisons               Animal Survival Times
+polar                 Pole Positions of New Caledonian Laterites
+remission             Cancer Remission and Cell Activity
+salinity              Water Salinity and River Discharge
+survival              Survival of Rats after Radiation Doses
+tau                   Tau Particle Decay Modes
+tuna                  Tuna Sighting Data
+urine                 Urine Analysis Data
+wool                  Australian Relative Wool Prices
+
+Data sets in package ‘BradleyTerry2’:
+
+CEMS                  Dittrich, Hatzinger and Katzenbeisser
+                      (1998, 2001) Data on Management School
+                      Preference in Europe
+baseball              Baseball Data from Agresti (2002)
+chameleons            Male Cape Dwarf Chameleons: Measured Traits
+                      and Contest Outcomes
+citations             Statistics Journal Citation Data from
+                      Stigler (1994)
+flatlizards           Augrabies Male Flat Lizards: Contest
+                      Results and Predictor Variables
+football              English Premier League Football Results
+                      2008/9 to 2012/13
+icehockey             College Hockey Men's Division I 2009-10
+                      results
+seeds                 Seed Germination Data from Crowder (1978)
+sound.fields          Kousgaard (1984) Data on Pair Comparisons
+                      of Sound Fields
+springall             Springall (1973) Data on Subjective
+                      Evaluation of Flavour Strength
+
+Data sets in package ‘brglm’:
+
+lizards               Habitat Preferences of Lizards
+
+Data sets in package ‘car’:
+
+AMSsurvey             American Math Society Survey Data
+Adler                 Experimenter Expectations
+Angell                Moral Integration of American Cities
+Anscombe              U. S. State Public-School Expenditures
+Baumann               Methods of Teaching Reading Comprehension
+Bfox                  Canadian Women's Labour-Force Participation
+Blackmore             Exercise Histories of Eating-Disordered and
+                      Control Subjects
+Burt                  Fraudulent Data on IQs of Twins Raised
+                      Apart
+CanPop                Canadian Population Data
+Chile                 Voting Intentions in the 1988 Chilean
+                      Plebiscite
+Chirot                The 1907 Romanian Peasant Rebellion
+Cowles                Cowles and Davis's Data on Volunteering
+Davis                 Self-Reports of Height and Weight
+DavisThin             Davis's Data on Drive for Thinness
+Depredations          Minnesota Wolf Depredation Data
+Duncan                Duncan's Occupational Prestige Data
+Ericksen              The 1980 U.S. Census Undercount
+Florida               Florida County Voting
+Freedman              Crowding and Crime in U. S. Metropolitan
+                      Areas
+Friendly              Format Effects on Recall
+Ginzberg              Data on Depression
+Greene                Refugee Appeals
+Guyer                 Anonymity and Cooperation
+Hartnagel             Canadian Crime-Rates Time Series
+Highway1              Highway Accidents
+KosteckiDillon        Treatment of Migraine Headaches
+Leinhardt             Data on Infant-Mortality
+Mandel                Contrived Collinear Data
+Migration             Canadian Interprovincial Migration Data
+Moore                 Status, Authoritarianism, and Conformity
+Mroz                  U.S. Women's Labor-Force Participation
+OBrienKaiser          O'Brien and Kaiser's Repeated-Measures Data
+Ornstein              Interlocking Directorates Among Major
+                      Canadian Firms
+Pottery               Chemical Composition of Pottery
+Prestige              Prestige of Canadian Occupations
+Quartet               Four Regression Datasets
+Robey                 Fertility and Contraception
+SLID                  Survey of Labour and Income Dynamics
+Sahlins               Agricultural Production in Mazulu Village
+Salaries              Salaries for Professors
+Soils                 Soil Compositions of Physical and Chemical
+                      Characteristics
+States                Education and Related Statistics for the
+                      U.S. States
+Transact              Transaction data
+UN                    GDP and Infant Mortality
+USPop                 Population of the United States
+Vocab                 Vocabulary and Education
+WeightLoss            Weight Loss Data
+Womenlf               Canadian Women's Labour-Force Participation
+Wong                  Post-Coma Recovery of IQ
+Wool                  Wool data
+
+Data sets in package ‘caret’:
+
+GermanCredit          German Credit Data
+absorp (tecator)      Fat, Water and Protein Content of Meat
+                      Samples
+bbbDescr (BloodBrain)
+                      Blood Brain Barrier Data
+cars                  Kelly Blue Book resale data for 2005 model
+                      year GM cars
+cox2Class (cox2)      COX-2 Activity Data
+cox2Descr (cox2)      COX-2 Activity Data
+cox2IC50 (cox2)       COX-2 Activity Data
+dhfr                  Dihydrofolate Reductase Inhibitors Data
+endpoints (tecator)   Fat, Water and Protein Content of Meat
+                      Samples
+fattyAcids (oil)      Fatty acid composition of commercial oils
+logBBB (BloodBrain)   Blood Brain Barrier Data
+mdrrClass (mdrr)      Multidrug Resistance Reversal (MDRR) Agent
+                      Data
+mdrrDescr (mdrr)      Multidrug Resistance Reversal (MDRR) Agent
+                      Data
+oilType (oil)         Fatty acid composition of commercial oils
+potteryClass (pottery)
+                      Pottery from Pre-Classical Sites in Italy
+segmentationData      Cell Body Segmentation
+
+Data sets in package ‘cluster’:
+
+agriculture           European Union Agricultural Workforces
+animals               Attributes of Animals
+chorSub               Subset of C-horizon of Kola Data
+flower                Flower Characteristics
+plantTraits           Plant Species Traits Data
+pluton                Isotopic Composition Plutonium Batches
+ruspini               Ruspini Data
+votes.repub           Votes for Republican Candidate in
+                      Presidential Elections
+xclara                Bivariate Data Set with 3 Clusters
+
+Data sets in package ‘colorspace’:
+
+USSouthPolygon        Polygon for County Map of US South States:
+                      Alabama, Georgia, and South Carolina
+
+Data sets in package ‘datasets’:
+
+AirPassengers         Monthly Airline Passenger Numbers 1949-1960
+BJsales               Sales Data with Leading Indicator
+BJsales.lead (BJsales)
+                      Sales Data with Leading Indicator
+BOD                   Biochemical Oxygen Demand
+CO2                   Carbon Dioxide Uptake in Grass Plants
+ChickWeight           Weight versus age of chicks on different
+                      diets
+DNase                 Elisa assay of DNase
+EuStockMarkets        Daily Closing Prices of Major European
+                      Stock Indices, 1991-1998
+Formaldehyde          Determination of Formaldehyde
+HairEyeColor          Hair and Eye Color of Statistics Students
+Harman23.cor          Harman Example 2.3
+Harman74.cor          Harman Example 7.4
+Indometh              Pharmacokinetics of Indomethacin
+InsectSprays          Effectiveness of Insect Sprays
+JohnsonJohnson        Quarterly Earnings per Johnson & Johnson
+                      Share
+LakeHuron             Level of Lake Huron 1875-1972
+LifeCycleSavings      Intercountry Life-Cycle Savings Data
+Loblolly              Growth of Loblolly pine trees
+Nile                  Flow of the River Nile
+Orange                Growth of Orange Trees
+OrchardSprays         Potency of Orchard Sprays
+PlantGrowth           Results from an Experiment on Plant Growth
+Puromycin             Reaction Velocity of an Enzymatic Reaction
+Seatbelts             Road Casualties in Great Britain 1969-84
+Theoph                Pharmacokinetics of Theophylline
+Titanic               Survival of passengers on the Titanic
+ToothGrowth           The Effect of Vitamin C on Tooth Growth in
+                      Guinea Pigs
+UCBAdmissions         Student Admissions at UC Berkeley
+UKDriverDeaths        Road Casualties in Great Britain 1969-84
+UKgas                 UK Quarterly Gas Consumption
+USAccDeaths           Accidental Deaths in the US 1973-1978
+USArrests             Violent Crime Rates by US State
+USJudgeRatings        Lawyers' Ratings of State Judges in the US
+                      Superior Court
+USPersonalExpenditure
+                      Personal Expenditure Data
+UScitiesD             Distances Between European Cities and
+                      Between US Cities
+VADeaths              Death Rates in Virginia (1940)
+WWWusage              Internet Usage per Minute
+WorldPhones           The World's Telephones
+ability.cov           Ability and Intelligence Tests
+airmiles              Passenger Miles on Commercial US Airlines,
+                      1937-1960
+airquality            New York Air Quality Measurements
+anscombe              Anscombe's Quartet of 'Identical' Simple
+                      Linear Regressions
+attenu                The Joyner-Boore Attenuation Data
+attitude              The Chatterjee-Price Attitude Data
+austres               Quarterly Time Series of the Number of
+                      Australian Residents
+beaver1 (beavers)     Body Temperature Series of Two Beavers
+beaver2 (beavers)     Body Temperature Series of Two Beavers
+cars                  Speed and Stopping Distances of Cars
+chickwts              Chicken Weights by Feed Type
+co2                   Mauna Loa Atmospheric CO2 Concentration
+crimtab               Student's 3000 Criminals Data
+discoveries           Yearly Numbers of Important Discoveries
+esoph                 Smoking, Alcohol and (O)esophageal Cancer
+euro                  Conversion Rates of Euro Currencies
+euro.cross (euro)     Conversion Rates of Euro Currencies
+eurodist              Distances Between European Cities and
+                      Between US Cities
+faithful              Old Faithful Geyser Data
+fdeaths (UKLungDeaths)
+                      Monthly Deaths from Lung Diseases in the UK
+freeny                Freeny's Revenue Data
+freeny.x (freeny)     Freeny's Revenue Data
+freeny.y (freeny)     Freeny's Revenue Data
+infert                Infertility after Spontaneous and Induced
+                      Abortion
+iris                  Edgar Anderson's Iris Data
+iris3                 Edgar Anderson's Iris Data
+islands               Areas of the World's Major Landmasses
+ldeaths (UKLungDeaths)
+                      Monthly Deaths from Lung Diseases in the UK
+lh                    Luteinizing Hormone in Blood Samples
+longley               Longley's Economic Regression Data
+lynx                  Annual Canadian Lynx trappings 1821-1934
+mdeaths (UKLungDeaths)
+                      Monthly Deaths from Lung Diseases in the UK
+morley                Michelson Speed of Light Data
+mtcars                Motor Trend Car Road Tests
+nhtemp                Average Yearly Temperatures in New Haven
+nottem                Average Monthly Temperatures at Nottingham,
+                      1920-1939
+npk                   Classical N, P, K Factorial Experiment
+occupationalStatus    Occupational Status of Fathers and their
+                      Sons
+precip                Annual Precipitation in US Cities
+presidents            Quarterly Approval Ratings of US Presidents
+pressure              Vapor Pressure of Mercury as a Function of
+                      Temperature
+quakes                Locations of Earthquakes off Fiji
+randu                 Random Numbers from Congruential Generator
+                      RANDU
+rivers                Lengths of Major North American Rivers
+rock                  Measurements on Petroleum Rock Samples
+sleep                 Student's Sleep Data
+stack.loss (stackloss)
+                      Brownlee's Stack Loss Plant Data
+stack.x (stackloss)   Brownlee's Stack Loss Plant Data
+stackloss             Brownlee's Stack Loss Plant Data
+state.abb (state)     US State Facts and Figures
+state.area (state)    US State Facts and Figures
+state.center (state)
+                      US State Facts and Figures
+state.division (state)
+                      US State Facts and Figures
+state.name (state)    US State Facts and Figures
+state.region (state)
+                      US State Facts and Figures
+state.x77 (state)     US State Facts and Figures
+sunspot.month         Monthly Sunspot Data, from 1749 to
+                      "Present"
+sunspot.year          Yearly Sunspot Data, 1700-1988
+sunspots              Monthly Sunspot Numbers, 1749-1983
+swiss                 Swiss Fertility and Socioeconomic
+                      Indicators (1888) Data
+treering              Yearly Treering Data, -6000-1979
+trees                 Girth, Height and Volume for Black Cherry
+                      Trees
+uspop                 Populations Recorded by the US Census
+volcano               Topographic Information on Auckland's
+                      Maunga Whau Volcano
+warpbreaks            The Number of Breaks in Yarn during Weaving
+women                 Average Heights and Weights for American
+                      Women
+
+Data sets in package ‘dichromat’:
+
+dalton                Effects of Daltonism (Red-Green Color
+                      Blindness)
+dalton.colors (dalton)
+                      Effects of Daltonism (Red-Green Color
+                      Blindness)
+
+Data sets in package ‘dplyr’:
+
+nasa                  NASA spatio-temporal data
+
+Data sets in package ‘effects’:
+
+Arrests               Arrests for Marijuana Possession
+BEPS                  British Election Panel Study
+Cowles                Cowles and Davis's Data on Volunteering
+Hartnagel             Canadian Crime-Rates Time Series
+Prestige              Prestige of Canadian Occupations
+TitanicSurvival       Survival of Passengers on the Titanic
+WVS                   World Values Surveys
+Wells                 Well Switching in Bangladesh
+
+Data sets in package ‘fBasics’:
+
+.HedgeFund1 (HedgeFund)
+                      fBsiscs Data Sets
+.HedgeFund2 (HedgeFund)
+                      fBsiscs Data Sets
+Capitalization        fBsiscs Data Sets
+DowJones30            fBsiscs Data Sets
+HedgeFund             fBsiscs Data Sets
+PensionFund           fBsiscs Data Sets
+SWXLP                 fBsiscs Data Sets
+cars2                 fBsiscs Data Sets
+msft.dat              fBsiscs Data Sets
+nyse                  fBsiscs Data Sets
+swissEconomy          fBsiscs Data Sets
+usdthb                fBsiscs Data Sets
+
+Data sets in package ‘gdata’:
+
+MedUnits              Table of conversions between Intertional
+                      Standard (SI) and US 'Conventional' Units
+                      for common medical measurements.
+
+Data sets in package ‘ggplot2’:
+
+diamonds              Prices of 50,000 round cut diamonds
+economics             US economic time series.
+midwest               Midwest demographics.
+movies                Movie information and user ratings from
+                      IMDB.com.
+mpg                   Fuel economy data from 1999 and 2008 for 38
+                      popular models of car
+msleep                An updated and expanded version of the
+                      mammals sleep dataset.
+presidential          Terms of 10 presidents from Eisenhower to
+                      Bush W.
+seals                 Vector field of seal movements.
+
+Data sets in package ‘gplots’:
+
+rtPCR                 Teratogenesis rtPCR data
+
+Data sets in package ‘gss’:
+
+ColoCan               Colorectal Cancer Mortality Rate in Indiana
+                      Counties
+LakeAcidity           Water Acidity in Lakes
+NO2                   Air Pollution and Road Traffic
+Sachs                 Protein Expression in Human Immune System
+                      Cells
+aids                  AIDS Incubation
+bacteriuria           Treatment of Bacteriuria
+buffalo               Buffalo Annual Snowfall
+clim                  Average Temperatures During December 1980
+                      Through February 1981
+esc                   Embryonic Stem Cell from Mouse
+eyetrack              Eyesight Fixation in Eyetracking
+                      Experiments
+gastric               Gastric Cancer Data
+nox                   NOx in Engine Exhaust
+ozone                 Ozone Concentration in Los Angeles Basin
+penny                 Thickness of US Lincoln Pennies
+stan                  Stanford Heart Transplant Data
+wesdr                 Progression of Diabetic Retinopathy
+
+Data sets in package ‘gtools’:
+
+ELISA                 Data from an ELISA assay
+
+Data sets in package ‘kernlab’:
+
+income                Income Data
+musk                  Musk data set
+promotergene          E. coli promoter gene sequences (DNA)
+reuters               Reuters Text Data
+rlabels (reuters)     Reuters Text Data
+spam                  Spam E-mail Database
+spirals               Spirals Dataset
+ticdata               The Insurance Company Data
+
+Data sets in package ‘lattice’:
+
+barley                Yield data from a Minnesota barley trial
+environmental         Atmospheric environmental conditions in New
+                      York City
+ethanol               Engine exhaust fumes from burning ethanol
+melanoma              Melanoma skin cancer incidence
+singer                Heights of New York Choral Society singers
+
+Data sets in package ‘latticeExtra’:
+
+EastAuClimate         Climate of the East Coast of Australia
+SeatacWeather         Daily Rainfall and Temperature at the
+                      Seattle-Tacoma Airport
+USAge.df              US national population estimates
+USAge.table           US national population estimates
+USCancerRates         Rate of Death Due to Cancer in US Counties
+ancestry              Modal ancestry by County according to US
+                      2000 Census
+biocAccess            Hourly access attempts to Bioconductor
+                      website
+gvhd10                Flow cytometry data from five samples from
+                      a patient
+postdoc               Reasons for Taking First Postdoctoral
+                      Appointment
+
+Data sets in package ‘lme4’:
+
+Dyestuff              Yield of dyestuff by batch
+Dyestuff2             Yield of dyestuff by batch
+GQN                   Sparse Gauss-Hermite quadrature grids
+InstEval              University Lecture/Instructor Evaluations
+                      by Students at ETH
+Pastes                Paste strength by batch and cask
+Penicillin            Variation in penicillin testing
+VerbAgg               Verbal Aggression item responses
+cake                  Breakage Angle of Chocolate Cakes
+cbpp                  Contagious bovine pleuropneumonia
+grouseticks           Data on red grouse ticks from Elston et al.
+                      2001
+grouseticks_agg (grouseticks)
+                      Data on red grouse ticks from Elston et al.
+                      2001
+sleepstudy            Reaction times in a sleep deprivation study
+
+Data sets in package ‘MASS’:
+
+Aids2                 Australian AIDS Survival Data
+Animals               Brain and Body Weights for 28 Species
+Boston                Housing Values in Suburbs of Boston
+Cars93                Data from 93 Cars on Sale in the USA in
+                      1993
+Cushings              Diagnostic Tests on Patients with Cushing's
+                      Syndrome
+DDT                   DDT in Kale
+GAGurine              Level of GAG in Urine of Children
+Insurance             Numbers of Car Insurance claims
+Melanoma              Survival from Malignant Melanoma
+OME                   Tests of Auditory Perception in Children
+                      with OME
+Pima.te               Diabetes in Pima Indian Women
+Pima.tr               Diabetes in Pima Indian Women
+Pima.tr2              Diabetes in Pima Indian Women
+Rabbit                Blood Pressure in Rabbits
+Rubber                Accelerated Testing of Tyre Rubber
+SP500                 Returns of the Standard and Poors 500
+Sitka                 Growth Curves for Sitka Spruce Trees in
+                      1988
+Sitka89               Growth Curves for Sitka Spruce Trees in
+                      1989
+Skye                  AFM Compositions of Aphyric Skye Lavas
+Traffic               Effect of Swedish Speed Limits on Accidents
+UScereal              Nutritional and Marketing Information on US
+                      Cereals
+UScrime               The Effect of Punishment Regimes on Crime
+                      Rates
+VA                    Veteran's Administration Lung Cancer Trial
+abbey                 Determinations of Nickel Content
+accdeaths             Accidental Deaths in the US 1973-1978
+anorexia              Anorexia Data on Weight Change
+bacteria              Presence of Bacteria after Drug Treatments
+beav1                 Body Temperature Series of Beaver 1
+beav2                 Body Temperature Series of Beaver 2
+biopsy                Biopsy Data on Breast Cancer Patients
+birthwt               Risk Factors Associated with Low Infant
+                      Birth Weight
+cabbages              Data from a cabbage field trial
+caith                 Colours of Eyes and Hair of People in
+                      Caithness
+cats                  Anatomical Data from Domestic Cats
+cement                Heat Evolved by Setting Cements
+chem                  Copper in Wholemeal Flour
+coop                  Co-operative Trial in Analytical Chemistry
+cpus                  Performance of Computer CPUs
+crabs                 Morphological Measurements on Leptograpsus
+                      Crabs
+deaths                Monthly Deaths from Lung Diseases in the UK
+drivers               Deaths of Car Drivers in Great Britain
+                      1969-84
+eagles                Foraging Ecology of Bald Eagles
+epil                  Seizure Counts for Epileptics
+farms                 Ecological Factors in Farm Management
+fgl                   Measurements of Forensic Glass Fragments
+forbes                Forbes' Data on Boiling Points in the Alps
+galaxies              Velocities for 82 Galaxies
+gehan                 Remission Times of Leukaemia Patients
+genotype              Rat Genotype Data
+geyser                Old Faithful Geyser Data
+gilgais               Line Transect of Soil in Gilgai Territory
+hills                 Record Times in Scottish Hill Races
+housing               Frequency Table from a Copenhagen Housing
+                      Conditions Survey
+immer                 Yields from a Barley Field Trial
+leuk                  Survival Times and White Blood Counts for
+                      Leukaemia Patients
+mammals               Brain and Body Weights for 62 Species of
+                      Land Mammals
+mcycle                Data from a Simulated Motorcycle Accident
+menarche              Age of Menarche in Warsaw
+michelson             Michelson's Speed of Light Data
+minn38                Minnesota High School Graduates of 1938
+motors                Accelerated Life Testing of Motorettes
+muscle                Effect of Calcium Chloride on Muscle
+                      Contraction in Rat Hearts
+newcomb               Newcomb's Measurements of the Passage Time
+                      of Light
+nlschools             Eighth-Grade Pupils in the Netherlands
+npk                   Classical N, P, K Factorial Experiment
+npr1                  US Naval Petroleum Reserve No. 1 data
+oats                  Data from an Oats Field Trial
+painters              The Painter's Data of de Piles
+petrol                N. L. Prater's Petrol Refinery Data
+phones                Belgium Phone Calls 1950-1973
+quine                 Absenteeism from School in Rural New South
+                      Wales
+road                  Road Accident Deaths in US States
+rotifer               Numbers of Rotifers by Fluid Density
+ships                 Ships Damage Data
+shoes                 Shoe wear data of Box, Hunter and Hunter
+shrimp                Percentage of Shrimp in Shrimp Cocktail
+shuttle               Space Shuttle Autolander Problem
+snails                Snail Mortality Data
+steam                 The Saturated Steam Pressure Data
+stormer               The Stormer Viscometer Data
+survey                Student Survey Data
+synth.te              Synthetic Classification Problem
+synth.tr              Synthetic Classification Problem
+topo                  Spatial Topographic Data
+waders                Counts of Waders at 15 Sites in South
+                      Africa
+whiteside             House Insulation: Whiteside's Data
+wtloss                Weight Loss Data from an Obese Patient
+
+Data sets in package ‘Matrix’:
+
+CAex                  Albers' example Matrix with "Difficult"
+                      Eigen Factorization
+KNex                  Koenker-Ng Example Sparse Model Matrix and
+                      Response Vector
+USCounties            USCounties Contiguity Matrix
+
+Data sets in package ‘mgcv’:
+
+columb                Reduced version of Columbus OH crime data
+columb.polys          Reduced version of Columbus OH crime data
+
+Data sets in package ‘mice’:
+
+boys                  Growth of Dutch boys
+fdd                   SE Fireworks disaster data
+fdd.pred              SE Fireworks disaster data
+fdgs                  Fifth Dutch growth study 2009
+leiden85              Leiden 85+ study
+mammalsleep           Mammal sleep data
+nhanes                NHANES example - all variables numerical
+nhanes2               NHANES example - mixed numerical and
+                      discrete variables
+pattern1              Datasets with various missing data patterns
+pattern2              Datasets with various missing data patterns
+pattern3              Datasets with various missing data patterns
+pattern4              Datasets with various missing data patterns
+popmis                Hox pupil popularity data with missing
+                      popularity scores
+pops                  Project on preterm and small for
+                      gestational age infants (POPS)
+pops.pred             Project on preterm and small for
+                      gestational age infants (POPS)
+potthoffroy           Potthoff-Roy data
+selfreport            Self-reported and measured BMI
+tbc                   Terneuzen birth cohort
+tbc.target            Terneuzen birth cohort
+walking               Walking disability data
+windspeed             Subset of Irish wind speed data
+
+Data sets in package ‘mlbench’:
+
+BostonHousing         Boston Housing Data
+BostonHousing2        Boston Housing Data
+BreastCancer          Wisconsin Breast Cancer Database
+DNA                   Primate splice-junction gene sequences
+                      (DNA)
+Glass                 Glass Identification Database
+HouseVotes84          United States Congressional Voting Records
+                      1984
+Ionosphere            Johns Hopkins University Ionosphere
+                      database
+LetterRecognition     Letter Image Recognition Data
+Ozone                 Los Angeles ozone pollution data, 1976
+PimaIndiansDiabetes   Pima Indians Diabetes Database
+PimaIndiansDiabetes2
+                      Pima Indians Diabetes Database
+Satellite             Landsat Multi-Spectral Scanner Image Data
+Servo                 Servo Data
+Shuttle               Shuttle Dataset (Statlog version)
+Sonar                 Sonar, Mines vs. Rocks
+Soybean               Soybean Database
+Vehicle               Vehicle Silhouettes
+Vowel                 Vowel Recognition (Deterding data)
+Zoo                   Zoo Data
+
+Data sets in package ‘multcomp’:
+
+adevent               Adverse Events Data
+cholesterol           Cholesterol Reduction Data Set
+cml                   Chronic Myelogenous Leukemia survival data.
+detergent             Detergent Durability Data Set
+fattyacid             Fatty Acid Content of Bacillus simplex.
+litter                Litter Weights Data Set
+mtept                 Multiple Endpoints Data
+recovery              Recovery Time Data Set
+sbp                   Systolic Blood Pressure Data
+trees513              Frankonian Tree Damage Data
+waste                 Industrial Waste Data Set
+
+Data sets in package ‘nlme’:
+
+Alfalfa               Split-Plot Experiment on Varieties of
+                      Alfalfa
+Assay                 Bioassay on Cell Culture Plate
+BodyWeight            Rat weight over time for different diets
+Cefamandole           Pharmacokinetics of Cefamandole
+Dialyzer              High-Flux Hemodialyzer
+Earthquake            Earthquake Intensity
+Fatigue               Cracks caused by metal fatigue
+Gasoline              Refinery yield of gasoline
+Glucose               Glucose levels over time
+Glucose2              Glucose Levels Following Alcohol Ingestion
+Gun                   Methods for firing naval guns
+IGF                   Radioimmunoassay of IGF-I Protein
+Machines              Productivity Scores for Machines and
+                      Workers
+MathAchSchool         School demographic data for MathAchieve
+MathAchieve           Mathematics achievement scores
+Meat                  Tenderness of meat
+Milk                  Protein content of cows' milk
+Muscle                Contraction of heart muscle sections
+Nitrendipene          Assay of nitrendipene
+Oats                  Split-plot Experiment on Varieties of Oats
+Orthodont             Growth curve data on an orthdontic
+                      measurement
+Ovary                 Counts of Ovarian Follicles
+Oxboys                Heights of Boys in Oxford
+Oxide                 Variability in Semiconductor Manufacturing
+PBG                   Effect of Phenylbiguanide on Blood Pressure
+Phenobarb             Phenobarbitol Kinetics
+Pixel                 X-ray pixel intensities over time
+Quinidine             Quinidine Kinetics
+Rail                  Evaluation of Stress in Railway Rails
+RatPupWeight          The weight of rat pups
+Relaxin               Assay for Relaxin
+Remifentanil          Pharmacokinetics of remifentanil
+Soybean               Growth of soybean plants
+Spruce                Growth of Spruce Trees
+Tetracycline1         Pharmacokinetics of tetracycline
+Tetracycline2         Pharmacokinetics of tetracycline
+Wafer                 Modeling of Analog MOS Circuits
+Wheat                 Yields by growing conditions
+Wheat2                Wheat Yield Trials
+bdf                   Language scores
+ergoStool             Ergometrics experiment with stool types
+
+Data sets in package ‘pbkrtest’:
+
+beets                 Yield and sugar percentage in sugar beets
+                      from a split plot experiment.
+budworm               Effect of Insecticide on survivial of
+                      tobacco budworms
+
+Data sets in package ‘plyr’:
+
+baseball              Yearly batting records for all major league
+                      baseball players
+ozone                 Monthly ozone measurements over Central
+                      America.
+
+Data sets in package ‘pmml’:
+
+audit                 Artificially constructed dataset
+
+Data sets in package ‘pROC’:
+
+aSAH                  Subarachnoid hemorrhage data
+
+Data sets in package ‘quantreg’:
+
+Bosco                 Boscovich Data
+CobarOre              Cobar Ore data
+Mammals               Garland(1983) Data on Running Speed of
+                      Mammals
+Peirce                C.S. Peirce's Auditory Response Data
+barro                 Barro Data
+engel                 Engel Data
+uis                   UIS Drug Treatment study data
+
+Data sets in package ‘randomForest’:
+
+imports85             The Automobile Data
+
+Data sets in package ‘rattle’:
+
+audit                 Sample dataset for illustration Rattle
+                      functionality.
+locationsAUS          Sample and full dataset for illustrating
+                      Rattle functionality.
+weather               Sample and full dataset for illustrating
+                      Rattle functionality.
+weatherAUS            Sample and full dataset for illustrating
+                      Rattle functionality.
+wine                  The wine dataset from the UCI Machien
+                      Learning Repository.
+
+Data sets in package ‘RCurl’:
+
+mimeTypeExtensions    Mapping from extension to MIME type
+
+Data sets in package ‘reshape’:
+
+french_fries          Sensory data from a french fries experiment
+smiths                Demo data describing the Smiths
+tips                  Tipping data
+
+Data sets in package ‘reshape2’:
+
+french_fries          Sensory data from a french fries
+                      experiment.
+smiths                Demo data describing the Smiths.
+tips                  Tipping data
+
+Data sets in package ‘rggobi’:
+
+stormtracks           Storm tracks in the Caribbean
+
+Data sets in package ‘ROCR’:
+
+ROCR.hiv              Data set: Support vector machines and
+                      neural networks applied to the prediction
+                      of HIV-1 coreceptor usage
+ROCR.simple           Data set: Simple artificial prediction data
+                      for use with ROCR
+ROCR.xval             Data set: Artificial cross-validation data
+                      for use with ROCR
+
+Data sets in package ‘rpart’:
+
+car.test.frame        Automobile Data from 'Consumer Reports'
+                      1990
+car90                 Automobile Data from 'Consumer Reports'
+                      1990
+cu.summary            Automobile Data from 'Consumer Reports'
+                      1990
+kyphosis              Data on Children who have had Corrective
+                      Spinal Surgery
+solder                Soldering of Components on Printed-Circuit
+                      Boards
+stagec                Stage C Prostate Cancer
+
+Data sets in package ‘sampling’:
+
+MU284                 The MU284 population
+belgianmunicipalities
+                      The Belgian municipalities population
+swissmunicipalities   The Swiss municipalities population
+
+Data sets in package ‘sandwich’:
+
+Investment            US Investment Data
+PublicSchools         US Expenditures for Public Schools
+
+Data sets in package ‘SparseM’:
+
+X (triogramX)         A Design Matrix for a Triogram Problem
+lsq                   Least Squares Problems in Surveying
+
+Data sets in package ‘survival’:
+
+aml (leukemia)        Acute Myelogenous Leukemia survival data
+bladder               Bladder Cancer Recurrences
+bladder1 (bladder)    Bladder Cancer Recurrences
+bladder2 (bladder)    Bladder Cancer Recurrences
+cancer                NCCTG Lung Cancer Data
+cgd                   Chronic Granulotomous Disease data
+cgd0 (cgd)            Chronic Granulotomous Disease data
+colon                 Chemotherapy for Stage B/C colon cancer
+flchain               Assay of serum free light chain for 7874
+                      subjects.
+heart                 Stanford Heart Transplant data
+jasa (heart)          Stanford Heart Transplant data
+jasa1 (heart)         Stanford Heart Transplant data
+kidney                Kidney catheter data
+leukemia              Acute Myelogenous Leukemia survival data
+logan                 Data from the 1972-78 GSS data used by
+                      Logan
+lung                  NCCTG Lung Cancer Data
+mgus                  Monoclonal gammapothy data
+mgus1 (mgus)          Monoclonal gammapothy data
+mgus2                 Monoclonal gammapothy data
+nwtco                 Data from the National Wilm's Tumor Study
+ovarian               Ovarian Cancer Survival Data
+pbc                   Mayo Clinic Primary Biliary Cirrhosis Data
+pbcseq (pbc)          Mayo Clinic Primary Biliary Cirrhosis,
+                      sequential data
+rats                  Rat treatment data from Mantel et al
+rats2 (rats)          Rat data from Gail et al.
+stanford2             More Stanford Heart Transplant data
+survexp.mn (survexp)
+                      Census Data Sets for the Expected Survival
+                      and Person Years Functions
+survexp.us (survexp)
+                      Census Data Sets for the Expected Survival
+                      and Person Years Functions
+survexp.usr (survexp)
+                      Census Data Sets for the Expected Survival
+                      and Person Years Functions
+tobin                 Tobin's Tobit data
+transplant            Liver transplant waiting list
+uspop2                Projected US Population
+veteran               Veterans' Administration Lung Cancer study
+
+Data sets in package ‘TH.data’:
+
+GBSG2                 German Breast Cancer Study Group 2
+GlaucomaM             Glaucoma Database
+Westbc                Breast Cancer Gene Expression
+birds                 Habitat Suitability for Breeding Bird
+                      Communities
+bodyfat               Prediction of Body Fat by Skinfold
+                      Thickness, Circumferences, and Bone
+                      Breadths
+mammoexp              Mammography Experience Study
+mn6.9                 I.Q. and attitude towards science
+sphase                S-phase Fraction of Tumor Cells
+wpbc                  Wisconsin Prognostic Breast Cancer Data
+
+Data sets in package ‘timeSeries’:
+
+LPP2005REC            Time Series Data Sets
+MSFT                  Time Series Data Sets
+USDCHF                Time Series Data Sets
+
+Data sets in package ‘xtable’:
+
+tli                   Math scores from Texas Assessment of
+                      Academic Skills (TAAS)

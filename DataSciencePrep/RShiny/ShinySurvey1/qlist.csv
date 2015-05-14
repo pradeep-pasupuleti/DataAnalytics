@@ -1,0 +1,11 @@
+Qnum,Question,Answer1,Answer2,Answer3,Answer4,Answer5
+1,To what extent has your company identified its critical cyber assets such as company network perimeter industrial automation and control systems storage and transport systems customer order validation systems or personnel systems?:,None,Basic,Moderate,Advanced,Expert
+2,For identified critical cyber assets what best describes the status of your company’s cyber protection efforts?:,Professor,Graduate Student,Undergraduate Student,Industry/Professional,Unemployed
+3,Describe the status of your company’s testing of security controls for its critical cyber assets?:,less than 25,26-35,36-45,46-55,56 or older
+4,Does your company have a cyber incident response capability?:,never,daily,weekly,monthly,
+5,Compared to last month, the threat to your organization from the CYBER THREATS AND  actors has:, fallen fast, fallen, stayed static, risen or risen fast
+6,I read the blog EconometricsBySimulation:,never,daily,weekly,monthly,
+7,My favorite color is:,red,blue,green,pink,orange
+8,My gender is:,Male,Female,,,
+9,My area of research can best be described as:,Statistics,Econometrics,Psychometrics,Data Analysis,Graphical Design
+10,My knowledge of R Shiny is best described as:,None,Basic,Moderate,Advanced,Expert
