@@ -1,3 +1,4 @@
+setwd("C:/Pradeep/Working Set/Consulting/Kaggle/DataAnalytics/DataSciencePrep/C1/Data")
 bankdata = read.table('UniversalBank.csv', header=T, sep=',')
 
 bankdata2=subset(bankdata, select=-c(ID,ZIP.Code)) # to remove the columns ID & ZIP Code from
