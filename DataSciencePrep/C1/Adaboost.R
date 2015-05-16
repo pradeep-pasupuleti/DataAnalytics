@@ -20,6 +20,7 @@ nrow(train_data)
 test = (1:5000) [-train] # to take a random sample of 40% of the records for test data
 test_data = bankdata5[test,]
 nrow(test_data)
+# added some comments
 
 #Total Data
 table(bankdata5$Personal.Loan)
