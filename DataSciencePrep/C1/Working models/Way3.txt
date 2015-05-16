@@ -1,0 +1,151 @@
+> modelnbs = naiveBayes(Florence ~ ., data = cbcs_train)
+> table(cbcs_train$Florence, predict(modelnbs, cbcs_train))
+   
+       0    1
+  0 1410  465
+  1  337  788
+> a=table(cbcs_train$Florence, predict(modelnbs, cbcs_train))
+> r_nbstr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbstr
+[1] 70.04444
+> table(cbcs_test$Florence, predict(modelnbs, cbcs_test))
+   
+      0   1
+  0 588 241
+  1 170 395
+> a=table(cbcs_test$Florence, predict(modelnbs, cbcs_test))
+> r_nbste=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbste
+[1] 69.9115
+> a=table(cbc_test$Florence, predict(modelnbs, cbc_test))
+> a
+   
+      0   1
+  0 692 224
+  1  51  33
+> r_nbsote=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbsote
+[1] 39.28571
+> library(RWeka)
+> modeldtc45= J48(Florence ~ ., data = cbc_train)
+> summary(modeldtc45)
+
+=== Summary ===
+
+Correctly Classified Instances        2746               91.5333 %
+Incorrectly Classified Instances       254                8.4667 %
+Kappa statistic                          0     
+Mean absolute error                      0.155 
+Root mean squared error                  0.2784
+Relative absolute error                 99.8519 %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances             3000     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2746    0 |    a = 0
+  254    0 |    b = 1
+> a=table(cbc_train$Florence, predict(modeldtc45, cbc_train))
+> a
+   
+       0    1
+  0 2746    0
+  1  254    0
+> r_c45tr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45tr
+[1] 0
+> a=table(cbc_test$Florence, predict(modeldtc45, cbc_test))
+> r_c45te=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45te
+[1] 0
+> modeldtsc45= J48(Florence ~ ., data = cbcs_train)
+> a=table(cbcs_train$Florence, predict(modelsdtc45, cbcs_train))
+Error in table(cbcs_train$Florence, predict(modelsdtc45, cbcs_train)) : 
+  all arguments must have the same length
+In addition: Warning message:
+'newdata' had 3000 rows but variable(s) found have 5000 rows 
+> a=table(cbcs_train$Florence, predict(modeldtsc45, cbcs_train))
+> a
+   
+       0    1
+  0 1765  110
+  1  264  861
+> r_c45str=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45str
+[1] 76.53333
+> a=table(cbcs_test$Florence, predict(modeldtsc45, cbcs_test))
+> a
+   
+      0   1
+  0 726 103
+  1 197 368
+> r_c45ste=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45ste
+[1] 65.13274
+> library(randomForest)
+> set.seed=1234
+> modelrf=randomForest(Florence~., data=cbc_train, ntree=300)
+> plot(modelrf)
+> importance(modelrf)
+           MeanDecreaseGini
+M                 26.338899
+R                 27.363357
+F                 17.230177
+FirstPurch        14.998695
+ChildBks          18.204947
+YouthBks           9.792179
+CookBks           19.021567
+DoItYBks          17.305076
+RefBks            10.932941
+ArtBks            12.463933
+GeogBks           20.700204
+ItalCook           7.975039
+ItalAtlas          5.167127
+ItalArt            6.504252
+Gender            11.578643
+> a=table(cbc_train$Florence, predict(modelrf, cbc_train))
+> a
+   
+       0    1
+  0 2745    1
+  1  187   67
+> r_rftr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_rftr
+[1] 26.37795
+> a=table(cbc_test$Florence, predict(modelrf, cbc_test))
+> a
+   
+      0   1
+  0 913   3
+  1  84   0
+> r_rfte=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_rfte
+[1] 0
+> modelab <- AdaBoostM1(Florence ~ .,cbc_train, control=Weka_control(I=100))
+> a=table(cbc_train$Florence, predict(modelab, cbc_train))
+> a
+   
+       0    1
+  0 2746    0
+  1  254    0
+> r_abtr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_abtr
+[1] 0
+> a=table(cbc_test$Florence, predict(modelab, cbc_test))
+> a
+   
+      0   1
+  0 916   0
+  1  84   0
+> r_abte=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_abte
+[1] 0
+> recall_comp=matrix(c(r_nbtr, r_nbte, r_nbstr, r_nbste, r_c45tr, r_c45te, r_rftr, r_rfte, r_abtr, r_abte), nrow=1) 
+> colnames(recall_comp)=c('NB_Tr', 'NB_TE', 'NBS_TR', 'NBS_TE', 'C4.5TR', 'C4.5TE', 'RFTR', 'RFTE', 'ABTR', 'ABTE')
+> recall_comp
+        NB_Tr   NB_TE   NBS_TR  NBS_TE C4.5TR C4.5TE     RFTR RFTE ABTR ABTE
+[1,] 8.833922 10.6599 70.04444 69.9115      0      0 26.37795    0    0    0
+> 

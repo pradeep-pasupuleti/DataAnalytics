@@ -1,0 +1,368 @@
+> head(cbc)
+  Seq. ID. Gender   M  R F FirstPurch ChildBks YouthBks CookBks DoItYBks RefBks
+1    1  25      1 297 14 2         22        0        1       1        0      0
+2    2  29      0 128  8 2         10        0        0       0        0      0
+3    3  46      1 138 22 7         56        2        1       2        0      1
+4    4  47      1 228  2 1          2        0        0       0        0      0
+5    5  51      1 257 10 1         10        0        0       0        0      0
+6    6  60      1 145  6 2         12        0        0       0        0      0
+  ArtBks GeogBks ItalCook ItalAtlas ItalArt Florence Related.Purchase Mcode Rcode
+1      0       0        0         0       0        0                0     5     4
+2      0       0        0         0       0        0                0     4     3
+3      0       1        1         0       0        0                2     4     4
+4      0       0        0         0       0        0                0     5     1
+5      0       0        0         0       0        0                0     5     3
+6      0       0        0         0       0        0                0     4     2
+  Fcode Yes_Florence No_Florence Purchase.Period
+1     2            0           1               8
+2     2            0           1               2
+3     3            0           1              34
+4     1            0           1               0
+5     1            0           1               0
+6     2            0           1               6
+> cbcsubset=subset(cbc,select=c(M,F,Purchase.Period,ArtBks,ItalAtlas,ItalArt))
+> library(infotheo)
+> cbcsubset = discretize(cbcsubset, disc="equalfreq", nbins=4 )
+> head(cbcsubset)
+  M F Purchase.Period ArtBks ItalAtlas ItalArt
+1 4 2               3      1         1       1
+2 1 2               2      1         1       1
+3 2 4               4      1         1       1
+4 3 1               1      1         1       1
+5 3 1               1      1         1       1
+6 2 2               2      1         1       1
+> cbcsubset2=subset(cbc,select=c(Gender,Florence))
+> cbcMain=cbind(cbcsubset,cbcsubset2)
+> head(cbcMain)
+  M F Purchase.Period ArtBks ItalAtlas ItalArt Gender Florence
+1 4 2               3      1         1       1      1        0
+2 1 2               2      1         1       1      0        0
+3 2 4               4      1         1       1      1        0
+4 3 1               1      1         1       1      1        0
+5 3 1               1      1         1       1      1        0
+6 2 2               2      1         1       1      1        0
+> attach(cbcMain)
+The following object(s) are masked from 'cbcMain (position 26)':
+
+    ArtBks, F, Florence, Gender, ItalArt, ItalAtlas, M, Purchase.Period
+The following object(s) are masked from 'package:base':
+
+    F
+> cbcMain$M=as.factor(M)
+> cbcMain$F=as.factor(F)
+> cbcMain$Purchase.Period=as.factor(Purchase.Period)
+> cbcMain$ArtBks=as.factor(ArtBks)
+> cbcMain$ItalAtlas=as.factor(ItalAtlas)
+> cbcMain$ItalArt=as.factor(ItalArt)
+> cbcMain$Florence=as.factor(Florence)
+> cbcMain$Gender=as.factor(Gender)
+> summary(cbcMain)
+ M        F        Purchase.Period ArtBks   ItalAtlas ItalArt  Gender   Florence
+ 1:1004   1:1227   1:1227          1:3108   1:3870    1:3827   0:1182   0:3662  
+ 2:1005   2:1203   2: 977          4: 892   4: 130    4: 173   1:2818   1: 338  
+ 3: 995   3: 624   3: 855                                                       
+ 4: 996   4: 946   4: 941                                                       
+train=sample(1:4000,3000)
+ cbc_train=cbcMain[train,]
+ test=(1:4000)[-train]
+ cbc_test=cbcMain[test,]
+ table(cbc_train$Florence)
+
+   0    1 
+2748  252 
+> table(cbc_test$Florence)
+
+  0   1 
+914  86 
+> library(e1071)
+> #Naive Bayes using training data
+> modelnb = naiveBayes(Florence ~ ., data = cbc_train)
+> table(cbc_train$Florence, predict(modelnb, cbc_train))
+   
+       0    1
+  0 2748    0
+  1  252    0
+> pred=predict(modelnb, cbc_train)
+> a=table(cbc_train$Florence, pred)
+> e_nbtr=(a[1,2]+a[2,1])/(a[1,1]+a[2,2]+a[1,2]+a[2,1])*100
+> e_nbtr
+[1] 8.4
+> r_nbtr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbtr
+[1] 0
+>  #Naive Bayes using test data
+> pred=predict(modelnb, cbc_test)
+> a=table(cbc_test$Florence, pred)
+> e_nbte=(a[1,2]+a[2,1])/(a[1,1]+a[2,2]+a[1,2]+a[2,1])*100
+> r_nbte=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbte
+[1] 0
+> names(cbcMain)
+[1] "M"               "F"               "Purchase.Period" "ArtBks"         
+[5] "ItalAtlas"       "ItalArt"         "Gender"          "Florence"       
+> cbcMains=cbcMain[,c(1,2,3,4,5,6,7,8)]
+> cbcMains=SMOTE(Florence~.,cbcMains,prec.over=400)
+> dim(cbcMains)
+[1] 2366    8
+> rownames(cbcMains)=as.character(seq(1:2366))
+> table(cbcMains$Florence)
+
+   0    1 
+1352 1014 
+> train=sample(1:2366,2000)
+> train=sample(1:2366,1800)
+> cbcs_train=cbcMains[train,]
+> test=(1:2366)[-train]
+> cbcs_test=cbcMains[test,]
+> table(cbcs_train$Florence)
+
+   0    1 
+1025  775 
+> table(cbcs_test$Florence)
+
+  0   1 
+327 239 
+> modelnbs = naiveBayes(Florence ~ ., data = cbcs_train)
+> table(cbcs_train$Florence, predict(modelnbs, cbcs_train))
+   
+      0   1
+  0 830 195
+  1 290 485
+> a=table(cbcs_train$Florence, predict(modelnbs, cbcs_train))
+> r_nbstr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_nbstr
+[1] 62.58065
+> a=table(cbcs_test$Florence, predict(modelnbs, cbcs_test))
+>  r_nbste=(a[2,2])/(a[2,1]+a[2,2])*100
+>  r_nbste
+[1] 57.74059
+> table(cbc_test$Florence, predict(modelnbs, cbc_test))
+   
+      0   1
+  0 723 191
+  1  55  31
+> a=table(cbc_test$Florence, predict(modelnbs, cbc_test))
+> r_nbsote=(a[2,2])/(a[2,1]+a[2,2])*100
+>  r_nbsote
+[1] 36.04651
+>  library(rpart)
+> modeldtcart <- rpart(Florence ~ ., data = cbc_train, method="class", cp=0.001)
+> prettyTree(modeldtcart)
+Error in plot.rpart(t, uniform = uniform, branch = branch, margin = margin,  : 
+  fit is not a tree, just a root
+> modeldtcart <- rpart(Florence ~ ., data = cbc_train, method="class", cp=0.001)
+> printcp(modeldtcart)
+
+Classification tree:
+rpart(formula = Florence ~ ., data = cbc_train, method = "class", 
+    cp = 0.001)
+
+Variables actually used in tree construction:
+character(0)
+
+Root node error: 252/3000 = 0.084
+
+n= 3000 
+
+  CP nsplit rel error
+1  0      0         1
+> modeldtscart <- rpart(Florence ~ ., data = cbcs_train, method="class", cp=0.001)
+> prettyTree(modeldtscart)
+> printcp(modeldtscart)
+
+Classification tree:
+rpart(formula = Florence ~ ., data = cbcs_train, method = "class", 
+    cp = 0.001)
+
+Variables actually used in tree construction:
+[1] ArtBks          F               Gender          ItalArt         ItalAtlas      
+[6] M               Purchase.Period
+
+Root node error: 775/1800 = 0.43056
+
+n= 1800 
+
+          CP nsplit rel error  xerror     xstd
+1  0.2567742      0   1.00000 1.00000 0.027107
+2  0.0761290      1   0.74323 0.74323 0.025537
+3  0.0245161      2   0.66710 0.66710 0.024770
+4  0.0133333      3   0.64258 0.64258 0.024490
+5  0.0109677      6   0.60258 0.61161 0.024111
+6  0.0051613      9   0.56000 0.61677 0.024176
+7  0.0038710     12   0.54452 0.62194 0.024241
+8  0.0025806     13   0.54065 0.59355 0.023878
+9  0.0017204     21   0.52000 0.59871 0.023946
+10 0.0016129     24   0.51484 0.59871 0.023946
+11 0.0010000     28   0.50839 0.59871 0.023946
+> fit2=prune(modeldtscart,cp=0.076)
+> printcp(fit2)
+
+Classification tree:
+rpart(formula = Florence ~ ., data = cbcs_train, method = "class", 
+    cp = 0.001)
+
+Variables actually used in tree construction:
+[1] ArtBks  ItalArt
+
+Root node error: 775/1800 = 0.43056
+
+n= 1800 
+
+        CP nsplit rel error  xerror     xstd
+1 0.256774      0   1.00000 1.00000 0.027107
+2 0.076129      1   0.74323 0.74323 0.025537
+3 0.076000      2   0.66710 0.66710 0.024770
+> prettyTree(fit2)
+> modeldtc45= J48(Florence ~ ., data = cbc_train)
+> summary(modeldtc45)
+
+=== Summary ===
+
+Correctly Classified Instances        2748               91.6    %
+Incorrectly Classified Instances       252                8.4    %
+Kappa statistic                          0     
+Mean absolute error                      0.1539
+Root mean squared error                  0.2774
+Relative absolute error                 99.8504 %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances             3000     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2748    0 |    a = 0
+  252    0 |    b = 1
+> modeldtsc45= J48(Florence ~ ., data = cbcs_train)
+> summary(modeldtsc45)
+
+=== Summary ===
+
+Correctly Classified Instances        1365               75.8333 %
+Incorrectly Classified Instances       435               24.1667 %
+Kappa statistic                          0.4871
+Mean absolute error                      0.3466
+Root mean squared error                  0.4163
+Relative absolute error                 70.673  %
+Root relative squared error             84.0681 %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)      98.1667 %
+Total Number of Instances             1800     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 932  93 |   a = 0
+ 342 433 |   b = 1
+> modeldtc45= J48(Florence ~ ., data = cbc_train)
+>  summary(modeldtc45)
+
+=== Summary ===
+
+Correctly Classified Instances        2748               91.6    %
+Incorrectly Classified Instances       252                8.4    %
+Kappa statistic                          0     
+Mean absolute error                      0.1539
+Root mean squared error                  0.2774
+Relative absolute error                 99.8504 %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances             3000     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2748    0 |    a = 0
+  252    0 |    b = 1
+>  a=table(cbc_train$Florence, predict(modeldtc45,cbc_train))
+> r_c45tr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45tr
+[1] 0
+>  a=table(cbcs_train$Florence, predict(modeldtsc45,cbcs_train))
+> r_c45tr_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45tr_cbcs
+[1] 55.87097
+> a=table(cbc_test$Florence, predict(modeldtc45,cbc_test))
+> r_c45te=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45te
+[1] 0
+> a=table(cbcs_test$Florence, predict(modeldtsc45,cbcs_test))
+> r_c45te_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_c45te_cbcs
+[1] 51.04603
+> set.seed=1234
+> modelrf=randomForest(Florence~., data=cbc_train, ntree=700)
+> plot(modelrf)
+> importance(modelrf)
+                MeanDecreaseGini
+M                       7.422108
+F                       5.789358
+Purchase.Period         5.076640
+ArtBks                  5.158898
+ItalAtlas               2.133718
+ItalArt                 3.050554
+Gender                  4.531304
+> modelrfs=randomForest(Florence~., data=cbcs_train, ntree=700)
+> plot(modelrfs)
+> importance(modelrfs)
+                MeanDecreaseGini
+M                       18.79524
+F                       47.38076
+Purchase.Period         50.41063
+ArtBks                  49.34817
+ItalAtlas               31.38132
+ItalArt                 84.77957
+Gender                  18.74479
+> a=table(cbc_train$Florence, predict(modelrf, cbc_train))
+> r_rftr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_rftr
+[1] 0
+> a=table(cbcs_train$Florence, predict(modelrfs, cbcs_train))
+> r_rftr_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_rftr_cbcs
+[1] 59.48387
+> a=table(cbc_test$Florence, predict(modelrf,cbc_test))
+>  r_rfte=(a[2,2])/(a[2,1]+a[2,2])*100
+>   r_rfte
+[1] 0
+> a=table(cbcs_test$Florence, predict(modelrfs,cbcs_test))
+>  r_rfte_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+>  r_rfte_cbcs
+[1] 55.23013
+> modelab <- AdaBoostM1(Florence ~ .,cbc_train, control=Weka_control(I=100))
+> table(cbc_train$Florence, predict(modelab))
+   
+       0    1
+  0 2748    0
+  1  252    0
+> modelabs <- AdaBoostM1(Florence ~ .,cbcs_train, control=Weka_control(I=100))
+> table(cbcs_train$Florence, predict(modelabs))
+   
+      0   1
+  0 877 148
+  1 324 451
+> a=table(cbc_train$Florence, predict(modelab, cbc_train))
+> r_abtr=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_abtr
+[1] 0
+> a=table(cbcs_train$Florence, predict(modelabs, cbcs_train))
+> r_abtr_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+> r_abtr_cbcs
+[1] 58.19355
+> a=table(cbc_test$Florence, predict(modelab, cbc_test))
+>  r_abte=(a[2,2])/(a[2,1]+a[2,2])*100
+>  r_abte
+[1] 0
+> a=table(cbcs_test$Florence, predict(modelabs, cbcs_test))
+>  r_abte_cbcs=(a[2,2])/(a[2,1]+a[2,2])*100
+>  r_abte_cbcs
+[1] 51.88285
+
+recall_comp=matrix(c(r_nbtr, r_nbte, r_nbstr, r_nbste, r_c45tr, r_c45te,r_c45tr_cbcs,r_c45te_cbcs, r_rftr, r_rfte,r_rftr_cbcs,r_rfte_cbcs, r_abtr, r_abte,r_abtr_cbcs,r_abte_cbcs), nrow=1)
+colnames(recall_comp)=c('NB_Tr', 'NB_TE', 'NBS_TR', 'NBS_TE', 'C4.5TR', 'C4.5TE','C4.5TR_SMOTE','C4.5TE_SMOTE', 'RFTR', 'RFTE','RFTR_SMOTE','RFTE_SMOTE', 'ABTR', 'ABTE','ABTR_SMOTE','ABTE_SMOTE')
+recall_comp
+     NB_Tr NB_TE   NBS_TR   NBS_TE C4.5TR C4.5TE C4.5TR_SMOTE C4.5TE_SMOTE RFTR RFTE RFTR_SMOTE RFTE_SMOTE ABTR ABTE ABTR_SMOTE ABTE_SMOTE
+[1,]     0     0 62.58065 57.74059      0      0     55.87097     51.04603    0    0   59.48387   55.23013    0    0   58.19355   51.88285
+> 
