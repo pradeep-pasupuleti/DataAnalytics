@@ -15,9 +15,8 @@ test$count=0
 data=rbind(train,test)
 
 str(data)
-
 summary(data)
-
+# thius is a cmmt
 data$season=as.factor(data$season)
 data$weather=as.factor(data$weather)
 data$holiday=as.factor(data$holiday)
