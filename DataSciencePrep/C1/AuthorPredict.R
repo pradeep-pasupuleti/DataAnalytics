@@ -3,6 +3,10 @@
 ## AVTM is the Final Generated Data Set
 
 ##Import All Libraries
+
+closeAllConnections()
+rm(list=ls())
+
 library(tm)
 library(SnowballC)
 
