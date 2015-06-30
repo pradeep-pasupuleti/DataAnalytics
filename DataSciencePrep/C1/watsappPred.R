@@ -11,6 +11,7 @@ rm(list=ls())
 
 wtsp<-read.table("DataSciencePrep/C1/Data/watsapp1.csv",sep=",",stringsAsFactors=FALSE,header=T,quote = "\"",allowEscapes=TRUE,fill=TRUE)
 
+# added a comment
 ##Select column from where Text needs to be Extracted
 # pos.time<-character(0)
 pos.text<-character(0)
